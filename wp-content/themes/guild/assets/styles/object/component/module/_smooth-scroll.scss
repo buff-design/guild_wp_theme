@@ -1,0 +1,112 @@
+/* --------------------------------------------------
+タブ切替
+-------------------------------------------------- */
+.c-smooth-scroll {
+  padding: 0;
+  margin: 0;
+
+  &__wrapper {
+    padding: 0 0 80px;
+  }
+  
+  &__nav {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(34,49,52,0.9);
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 560px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__nav-inner {
+    margin: 0 auto 0px;
+    width: 92%;
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 560px) {
+      width: 92%;
+    }
+
+    li {
+      height: 40px;
+      padding: 0 24px;
+      color: white;
+      background-color: rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.5s;
+      @include fs-Button-S;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.5);
+      }
+    }
+  }
+
+  &__content {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list {
+    padding: 0px 0 0px;
+    margin: 0 auto 0px;
+    width: 92%;
+    max-width: 720px;
+
+    @media screen and (max-width: 560px) {
+      width: 92%;
+    }
+
+    li {
+      margin-bottom: 80px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 560px) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__list-title {
+    font-size: 24px;
+    font-weight: bold;
+
+    @media screen and (max-width: 560px) {
+      @include fs-Subtitle-L;
+    }
+  }
+
+  &__list-image {
+    margin: 24px 0;
+    width: auto;
+
+    @media screen and (max-width: 560px) {
+      margin: 16px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__list-text {
+    font-size: 16px;
+    line-height: 1.8;
+
+    @media screen and (max-width: 560px) {
+      @include fs-Body-S;
+    }
+  }
+}

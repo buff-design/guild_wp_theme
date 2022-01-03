@@ -1,0 +1,100 @@
+/* --------------------------------------------------
+スライダー
+-------------------------------------------------- */
+.c-slider {
+  padding: 0;
+  margin: 0;
+  
+  &__head {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(34,49,52,0.9);
+  }
+
+  &__inner {
+    padding: 0px 0 40px;
+    margin: 0 auto 0px;
+    width: 92%;
+    max-width: 720px;
+
+    @media screen and (max-width: 560px) {
+      width: 92%;
+    }
+  }
+
+  .slides {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .change-btn-wrapper {
+    margin: 20px auto;
+    font-size: 18px;
+  }
+  
+  .change-btn-wrapper:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+  .prev-btn {
+    cursor: pointer;
+    float: left;
+    display: none;
+  }
+  
+  .next-btn {
+    cursor: pointer;
+    float: right;
+  }
+
+  .slides {
+    padding: 0;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .slide img {
+    height: 480px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 560px) {
+      height: 240px;
+    }
+  }
+  
+  .index-btn-wrapper {
+    font-size: 16px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .index-btn {
+    color: #4e90af;
+    background-color: #e0f5ff;
+    width: 40px;
+    padding: 6px 0;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .index-btn:hover {
+    color: #fff;
+    background-color: #5cabd0;
+  }
+
+}

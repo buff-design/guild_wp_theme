@@ -1,0 +1,67 @@
+/* --------------------------------------------------
+セクション
+-------------------------------------------------- */
+.l-main {
+  margin: 0 auto;
+  width: 100%;
+  
+  &__article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto 80px;
+
+    &:before {
+      display: block;
+      width: 22%;
+      content: "";
+      order: 1;
+    }
+
+    &:after {
+      display: block;
+      width: 22%;
+      content: "";
+    }
+
+    @media screen and (max-width: 560px) {
+      display: block;
+    }
+
+    li {
+      width: 22%;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 5px;
+      transition: all .25s ease-in-out;
+
+      @media screen and (max-width: 560px) {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+      }
+
+      a {
+        box-sizing: border-box;
+        display: block;
+        height: 100%;
+        padding-bottom: 5px;
+        color: #111;
+        text-decoration: none;
+
+        h2 {
+          margin: 0 10px 10px;
+          font-size: 1.6rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  &__thum {
+    margin-bottom: 10px;
+  }
+}

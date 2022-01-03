@@ -1,0 +1,196 @@
+/* --------------------------------------------------
+モーダルウィンドウ
+-------------------------------------------------- */
+.c-modal {
+  padding: 0;
+  margin: 0;
+
+  &__inner {
+    padding: 0 0 48px;
+  }
+
+  &__head {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(34,49,52,0.9);
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 560px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__login {
+    height: 40px;
+    padding: 0 24px;
+    color: white;
+    background-color: rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.5);
+    }
+  }
+
+  &__hero {
+    margin: 0 auto 0px;
+    width: 92%;
+    max-width: 720px;
+
+    @media screen and (max-width: 560px) {
+      width: 92%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__btn {
+    padding: 8px 24px;
+    color: white;
+    background-color: #239b76;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  /* モーダル部分のCSS */
+  &__login-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+  }
+
+  &__signup-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+  }
+
+  &__inner-signup-box {
+    position: absolute;
+    top: 30%;
+    left: calc(100% / 2 - 225px);
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    z-index: 200;
+    display: none;
+
+    @media screen and (max-width: 560px) {
+      width: 340px;
+      left: calc(100% / 2 - 170px);
+    }
+  }
+
+  &__inner-login-box {
+    position: absolute;
+    top: 30%;
+    left: calc(100% / 2 - 225px);
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    z-index: 200;
+    display: none;
+
+    @media screen and (max-width: 560px) {
+      width: 340px;
+      left: calc(100% / 2 - 170px);
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 24px;
+      background: #999;
+      left: 0%;
+      top: calc(50% - 1px);
+      transform-origin: 50% 50%;
+      transform: rotate(-45deg);
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 24px;
+      background: #999;
+      left: 0%;
+      top: calc(50% - 1px);
+      transform-origin: 50% 50%;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+/* フォームボックス */
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 7px 70px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
