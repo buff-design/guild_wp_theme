@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action     # JOBの名前
+    runs-on: ubuntu-latest      # 仮想環境の種類を指定
+    steps:
+      - uses: actions/checkout@master                   
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0   
+        env:                                        
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}     
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }} 
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
+          LOCAL_DIR: ./wp-content/themes/guild                           
+          REMOTE_DIR: "/creative-check.net/public_html/guild/wp-content/themes/guild"
