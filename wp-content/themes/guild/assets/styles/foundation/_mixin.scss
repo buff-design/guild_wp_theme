@@ -1,0 +1,52 @@
+/* --------------------------------------------------
+関数
+-------------------------------------------------- */
+// グラデーション指定
+@mixin gradient($start-color, $end-color, $orientation){
+  background: $start-color;
+  @if $orientation == tate {
+     /* vertical(tete) */
+    background: -webkit-linear-gradient(top, $start-color 0%,$end-color 100%);
+    background: linear-gradient(to bottom, $start-color 0%,$end-color 100%);
+  } @else if $orientation == yoko {
+    /* horizontal(yoko) */
+    background: -webkit-linear-gradient(left, $start-color 0%,$end-color 100%);
+    background: linear-gradient(to right, $start-color 0%,$end-color 100%);
+  } @else {
+    /* radial(maru) */
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color 0%,$end-color 100%);
+    background: radial-gradient(ellipse at center, $start-color 0%,$end-color 100%);
+  }
+}
+
+// ライン
+@mixin line($color){
+  font-weight: bold;
+  display: inline;
+  background: -webkit-linear-gradient(top, transparent 30%, $color 30%, $color 80%, transparent 80%);
+  background: linear-gradient(to bottom, transparent 30%, $color 30%, $color 80%, transparent 80%);
+}
+
+// アニメーション指定(キーフレーム、時間、ループ回数、動き)
+@mixin anime($anitype){
+  animation: $anitype;
+  -webkit-animation: $anitype;
+}
+
+// アニメーションキーフレーム
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+// フォントサイズ・行間・ウエイト
+@mixin fs-changer ($fs, $lh, $fw) {
+  font-size: $fs + rem;
+  line-height: $lh;
+  font-weight: $fw;
+}

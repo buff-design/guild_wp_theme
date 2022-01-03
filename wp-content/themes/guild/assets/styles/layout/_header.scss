@@ -1,0 +1,25 @@
+/* --------------------------------------------------
+ヘッダー
+-------------------------------------------------- */
+.header {
+  width: 92%;
+  margin: 20px auto 50px;
+
+  &__inner {}
+
+  &__logo {
+    width: 150px;
+    margin: 0 auto;
+
+    a {
+      display: block;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+      }
+    }
+  }
+}

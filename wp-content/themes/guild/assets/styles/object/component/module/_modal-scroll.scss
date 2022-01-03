@@ -1,0 +1,192 @@
+/* --------------------------------------------------
+モーダルウィンドウ（横スクロール）
+-------------------------------------------------- */
+.c-modal-scroll {
+  padding: 0;
+  margin: 0 auto 40px;
+  width: 92%;
+  max-width: 720px;
+  overflow: hidden;
+  overflow-x: scroll;
+  position: relative;
+  
+  @media screen and (max-width: 560px) {
+    width: 92%;
+  }
+  
+  &__wrapper {
+    padding: 0;
+    width: 1390px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: normal;
+    border: 1px solid $Dark-012;
+    border-collapse: collapse;
+
+    @media screen and (max-width: 560px) {
+      width: 1000px;
+    }
+
+    tr {
+
+      th {
+        padding: 8px;
+        background-color: #666;
+        color: #fff;
+        text-align: center;
+        font-weight: normal;
+        border: 1px solid $Dark-012;
+      }
+
+      th:nth-of-type(1) {
+        width: 90px;
+      }
+
+      th:nth-of-type(2) {
+        width: 160px;
+      }
+
+      th:nth-of-type(3) {
+        width: 120px;
+      }
+
+      th:nth-of-type(4) {
+        width: 90px;
+      }
+
+      th:nth-of-type(5) {
+        width: 90px;
+      }
+
+      th:nth-of-type(6) {
+        width: 90px;
+      }
+
+      th:nth-of-type(7) {
+        width: 130px;
+      }
+
+      td {
+        padding: 8px;
+        border: 1px solid $Dark-012;
+        text-align: center;
+      }
+    }
+  }
+
+  /* モーダル部分のCSS */
+  &__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    // display: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(25% - 98px / 2);
+      left: calc(50% - 100px / 2);
+      width: 98px;
+      height: 100px;
+      background: url(https://buff-design.com/sample/img/icon_scroll.png) center no-repeat;
+      background-size: contain;
+      z-index: 2;
+      animation: 2s ease-in-out slide infinite;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    30% {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    90% {
+      transform: translateX(-20px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+  }
+
+  &__login-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+  }
+
+  &__signup-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+  }
+
+  &__innerbox {
+    position: absolute;
+    top: 30%;
+    left: calc(100% / 2 - 45.33335vw);
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 340px;
+    height: auto;
+    text-align: center;
+  }
+
+  &__close-btn {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 24px;
+      background: #999;
+      left: 0%;
+      top: 50%;
+      top: calc(50% - 1px);
+      transform-origin: 50% 50%;
+      transform: rotate(-45deg);
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 24px;
+      background: #999;
+      left: 0%;
+      top: 50%;
+      top: calc(50% - 1px);
+      transform-origin: 50% 50%;
+      transform: rotate(45deg);
+    }
+  }
+}

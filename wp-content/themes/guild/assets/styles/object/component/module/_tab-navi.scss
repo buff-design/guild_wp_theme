@@ -1,0 +1,75 @@
+/* --------------------------------------------------
+タブ切替追従ボタン用
+-------------------------------------------------- */
+.c-tab-navi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  display: none;
+
+  @media screen and (max-width: 560px) {
+    width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    background-color: $Surface;
+    margin: 0 auto 0;
+
+    @media screen and (max-width: 560px) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 50%;
+    height: 50px;
+    @include fs-Button-S;
+    text-decoration: none;
+    background-color: $Surface;
+    box-shadow: 0 4px 0 $Dark-026;
+
+    &:hover {
+      color: $Primary;
+      background-color: $Primary_Hover;
+
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      color: $Primary;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        text-decoration: none;
+      }
+    }
+
+    &.js-active {
+      position: relative;
+      width: 50%;
+      height: 50px;
+      @include fs-Button-S;
+      text-decoration: none;
+      background-color: $Primary;
+      box-shadow: 0 4px 0 $Primary_Dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $Light-100;
+      }
+    }
+  }
+}

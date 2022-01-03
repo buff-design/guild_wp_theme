@@ -1,0 +1,108 @@
+/* --------------------------------------------------
+フォント指定
+-------------------------------------------------- */
+// フォントファミリ
+$Helvetica: "Helvetica Neue", Helvetica, Arial, "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
+
+// フォントサイズ
+@mixin fs-h1 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-h3 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-h4 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-Subtitle-XL {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-Subtitle-L {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-Subtitle {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@mixin fs-Subtitle-S {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+@mixin fs-Body-L {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: normal;
+}
+
+@mixin fs-Body {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: normal;
+}
+
+@mixin fs-Body-S {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  font-weight: normal;
+}
+
+@mixin fs-Button {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+@mixin fs-Button-S {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+@mixin fs-Caption_L {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+@mixin fs-Caption {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+@mixin fs-Caption-S {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+// 強制改行
+@mixin text-break {
+  word-wrap: break-word;
+  word-break: break-all;
+}

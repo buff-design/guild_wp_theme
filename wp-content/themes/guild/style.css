@@ -1,0 +1,68 @@
+/* Theme Name: guild */
+.bloc {
+    font-size: 16px;
+    padding: 20px;
+    background-color: #fafafa;
+    outline: 1px solid#f0f0f0;
+    border-color:#f0f0f0;
+    text-align: left;
+    margin: 15px 0px 60px 0px;
+}
+.bloc-list {
+    background-color: #f8f9ff;
+    border: dashed 1px #4865b2;
+    padding: 40px 10px 36px 40px !important;
+	list-style-type: disc !important;
+}
+.bloc-list li {
+    font-size: 1.6rem;
+	    margin-bottom: 10px;
+}
+.bloc-list2 {
+    background-color: #f8f9ff;
+    border: dashed 1px #4865b2;
+    padding: 40px 10px 36px 40px !important;
+	list-style-type: decimal !important;
+}
+.bloc-list2 li {
+    font-size: 1.6rem;
+	    margin-bottom: 10px;
+}
+
+.point {
+	margin-top: 50px !important;
+    font-weight: 600;
+	font-size: 1.8rem;
+    letter-spacing: 0.02em;
+	line-height: 1.8;
+}
+
+.point i {
+	width: 25px;
+}
+
+.list_article .date {
+	line-height: 1.6;
+	margin-bottom: 5px;
+}
+.list_article .date span {
+	display: inline-block;
+	border: 1px solid #333333;
+	padding: 1px 6px 0;
+}
+.list_article .thum {
+	margin-bottom: 10px;
+}
+
+.link_cate a {
+	display: inline-block;
+	border: 1px solid #333333;
+	padding: 1px 6px 0;
+	line-height: 1.6;
+	text-decoration: none;
+	color: #111111;
+}
+.link_cate a:hover {
+	border: 1px solid #8165a6;
+	color: #8165a6;
+}
