@@ -354,7 +354,7 @@ fieldset {
   width: 450px;
   height: auto;
   text-align: center;
-  z-index: 200;
+  z-index: 210;
   display: none;
 }
 @media screen and (max-width: 560px) {
